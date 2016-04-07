@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+
+    android:weightSum="7"> <!-- to show what the parent is -->
+    <LinearLayout
+
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+
+
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/smartdcrlogo"
+                >
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="25dp"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Ultimate Building Plan Scrutiny System"
+                android:textColor="#118C4E"
+                android:textSize="18dp"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:id="@+id/textView"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3"
+
+        android:layout_weight="6.5">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:fillViewport="true"
+            >
+
+
+
+        <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_weight="6">
+
+            <!--style="@style/spinner_style"-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/parameter_textview"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#118C4E"
+                android:text="Parameter:"/>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:id="@+id/parameter_linear"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/squarespinner"
+                android:layout_below="@id/parameter_textview"
+                android:layout_alignLeft="@+id/parameter_textview"
+                android:layout_alignStart="@+id/parameter_textview">
+
+
+
+            <Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/parameter_spinner"
+
+
+                android:textSize="22sp"
+                android:textColor="#118C4E"
+
+
+                android:layout_weight="1" />
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/provided_textview"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Provided:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#118C4E"
+                android:layout_below="@+id/parameter_linear"
+                />
+
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:id="@+id/provided_edittext"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:textColor="#118C4E"
+                android:inputType="number"
+                android:layout_below="@+id/provided_textview"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/noteditableedittext"
+                android:layout_alignParentStart="true"
+
+
+                android:textColorHint="#118C4E"
+                android:singleLine="true"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/measured_textview"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Measured:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#118C4E"
+                android:layout_below="@+id/provided_edittext"/>
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:id="@+id/measured_edittext"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:textColor="#118C4E"
+                android:inputType="number"
+                android:layout_below="@+id/measured_textview"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/squareedittext"
+                android:layout_alignParentStart="true"
+
+
+                android:textColorHint="#118C4E"
+                android:singleLine="true"
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/severity_textview"
+
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Severity:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#118C4E"
+                android:layout_below="@+id/measured_edittext"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:id="@+id/severity_linear"
+                android:layout_below="@+id/severity_textview"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/squarespinner">
+
+            <Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/severitystatus_spinner"
+
+
+
+                android:textColorHint="#118C4E"
+                android:singleLine="true"
+
+                android:textColor="#118C4E"
+
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                 />
+
+            </LinearLayout>
+
+            <!--<EditText-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:id="@+id/editText5"-->
+                <!--android:layout_marginRight="30dp"-->
+                <!--android:layout_marginLeft="30dp"-->
+                <!--android:background="@drawable/squareedittext"-->
+                <!--android:layout_marginTop="33dp"-->
+                <!--android:layout_below="@+id/severitystatus_edittext"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true" />-->
+
+            <!--<EditText-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:id="@+id/editText6"-->
+                <!--android:layout_marginRight="30dp"-->
+                <!--android:layout_marginLeft="30dp"-->
+                <!--android:background="@drawable/squareedittext"-->
+                <!--android:layout_below="@+id/editText5"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_marginTop="34dp" />-->
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:text="Submit"
+                android:textSize="18sp"
+                android:textColor="#FFFF00"
+                android:onClick="inspectionSubmit"
+                android:background="@drawable/squarebutton"
+                android:id="@+id/inspection_submit"
+                android:layout_below="@+id/capture_image_button"
+                android:layout_alignLeft="@+id/severity_linear"
+                android:layout_alignStart="@+id/severity_linear"
+                android:layout_marginTop="27dp"
+                android:layout_alignRight="@+id/severity_linear"
+                android:layout_alignEnd="@+id/severity_linear" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:text="Capture Image"
+                android:textSize="18sp"
+                android:textColor="#FFFF00"
+                android:onClick="inspectionSubmit"
+                android:background="@drawable/squarebutton"
+                android:id="@+id/capture_image_button"
+                android:layout_below="@+id/severity_linear"
+                android:layout_alignLeft="@+id/inspection_submit"
+                android:layout_alignStart="@+id/inspection_submit"
+                android:layout_marginTop="27dp"
+                android:layout_alignRight="@+id/inspection_submit"
+                android:layout_alignEnd="@+id/inspection_submit" />
+        </RelativeLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight=".5" >
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Powered by Vinza Solutions India Private Limited"
+            android:textColor="#000000"
+            android:layout_gravity="center|center_vertical"
+            android:gravity="center_horizontal"
+            android:textSize="14dp"
+            android:padding="10dp"
+            android:textStyle="bold"
+
+            android:id="@+id/textView1"
+
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

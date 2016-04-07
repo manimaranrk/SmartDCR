@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+
+    android:weightSum="7"> <!-- to show what the parent is -->
+    <LinearLayout
+
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+
+
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/smartdcrlogo"
+                >
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="25dp"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Ultimate Building Plan Scrutiny System"
+                android:textColor="#118C4E"
+                android:textSize="18dp"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:id="@+id/textView"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3"
+
+        android:layout_weight="6.5">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:fillViewport="true"
+            >
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:id="@+id/relative_sitedet"
+
+                    >
+
+
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:layout_weight=".5"
+                        android:text="S.No"
+                        android:textColor="#000000"
+
+
+                        android:id="@+id/sno_txt" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:text="Name"
+
+
+                        android:id="@+id/items_txt" />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="Measured"
+                        android:textColor="#000000"
+
+                        android:id="@+id/measured_txt" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="Image"
+                        android:textColor="#000000"
+
+
+                        android:id="@+id/inspection_txt" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:text="Severity"
+
+
+                        android:id="@+id/severity_txt" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_weight=".5"
+                        android:textColor="#000000"
+
+
+
+                        android:id="@+id/type_txt" />
+
+                </LinearLayout>
+
+
+
+
+                <!--style="@style/spinner_style"-->
+
+
+                <ListView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/complaints_listview"
+
+                    android:layout_below="@+id/relative_sitedet" />
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight=".5" >
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Powered by Vinza Solutions India Private Limited"
+            android:textColor="#000000"
+            android:layout_gravity="center|center_vertical"
+            android:gravity="center_horizontal"
+            android:textSize="14dp"
+            android:padding="10dp"
+            android:textStyle="bold"
+
+            android:id="@+id/textView1"
+
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
